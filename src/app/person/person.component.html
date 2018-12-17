@@ -1,0 +1,11 @@
+<div *ngIf="persons">
+  <h1>Person</h1>
+  <table border="1">
+    <tr><th>Id</th><th>Name</th><th>&nbsp;</th></tr>
+    <tr *ngFor="let p of persons | async">
+      <td>{{p.id}}</td>
+      <td>{{p.name}}</td>
+      <td><a href="#" (click)="removePerson(p.id)">Supprimer</a></td>
+    </tr>
+  </table>  
+</div>
